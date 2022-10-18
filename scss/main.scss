@@ -1,0 +1,52 @@
+//<ШРИФТЫ>
+@import 'fonts';
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
+@import 'reset';
+body {
+	font-family: Lato;
+	//transition: all 0.3s ease 0s;
+}
+
+//<МИКСИНЫ>
+@import 'mixins';
+
+//<ПЕРЕМЕННЫЕ>
+@import 'variables';
+
+//<СТИЛИ ОБЩИХ ЭЛЕМЕНТОВ>
+@import 'style';
+
+@import 'ui';
+//============================================================
+
+//<ОСНОВНОЙ БЛОК>
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+}
+//------------------------------------------------------------
+.main-screen {
+	flex: 1 0 100%;
+	@include bg('../img/bg/main-screen-bg.png');
+}
+//============================================================
+
+//<СЕКЦИИ СТРАНИЦЫ>
+@import 'header';
+@import 'page-sections/generation';
+@import 'page-sections/brands';
+@import 'page-sections/slider';
+@import 'page-sections/shop';
+@import 'page-sections/subscribe';
+
+//============================================================
+
+//<ПОДВАЛ>
+@import 'footer';
+//============================================================

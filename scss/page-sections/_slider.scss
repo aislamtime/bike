@@ -1,0 +1,15 @@
+.slider {
+	background-color: $block-bg;
+	padding: 120px 0 65px 0;
+	&__body {
+	}
+
+	&__item {
+	}
+	@media (max-width: 900px) {
+		padding: 60px 0 40px 0;
+	}
+	@media (max-width: 600px) {
+		padding: 30px 0;
+	}
+}

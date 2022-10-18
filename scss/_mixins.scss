@@ -1,0 +1,13 @@
+@mixin bg($img) {
+	background: url($img) center center / cover no-repeat;
+}
+@mixin arrow($color) {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid $color;
+}
+@mixin anim($time) {
+	transition: all $time ease 0s;
+}

@@ -1,0 +1,165 @@
+/*<ОБОЛОЧКА ВСЕЙ СТРАНИЦЫ>*/
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+}
+//============================================================
+
+/*<СТИЛИ ОБЩИХ ЭЛЕМЕНТОВ >*/
+.container {
+	max-width: 1130px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+//============================================================
+.btn {
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: $white;
+	border: 1px solid $button_border;
+	padding: 16px 60px;
+	@include anim(0.3s);
+
+	&:hover {
+		background-color: $button_hover-white;
+	}
+
+	@media (max-width: 1100px) {
+		padding: 16px 30px;
+	}
+}
+
+//============================================================
+
+.title {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: $title;
+	& span {
+		color: $text;
+		font-weight: 300;
+	}
+}
+//============================================================
+
+.text {
+	font-size: 18px;
+	line-height: 34px;
+	color: $text;
+	&_justify {
+		text-align: justify;
+		font-size: 16px;
+		line-height: 30px;
+		&:after {
+			content: '';
+			width: 50px;
+			height: 1px;
+			background-color: $text-decor;
+			display: block;
+			margin: 35px auto 0 auto;
+		}
+	}
+	&_italic {
+		font-style: 24px;
+		font-style: italic;
+	}
+
+	//MEDIA============================================================
+	@media (max-width: 1500px) {
+		&_justify {
+			&::after {
+				margin: 20px auto 0 auto;
+			}
+		}
+	}
+}
+//============================================================
+
+.block {
+	text-align: center;
+	&__icon {
+		margin: 0 0 25px 0;
+		&_mini img {
+			max-width: 32px;
+			border-radius: 3px;
+		}
+	}
+
+	&__title {
+		margin: 0 0 20px 0;
+		&_little-margin {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	&__text {
+	}
+}
+//============================================================
+
+.item {
+	height: 100%;
+	position: relative;
+	display: block;
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include anim(0.3s);
+		background-color: $hover_bg;
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+		span {
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			color: $white;
+			margin: 10px 0 0 0;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&._mobile &__logo {
+		background-color: transparent;
+		opacity: 1;
+		visibility: visible;
+	}
+	&_non-logo._mobile &__logo {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	//HOVER============================================================HOVER
+	&:hover {
+		.item__logo {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+//============================================================
+
+//============================================================
+
+//============================================================
+
+//============================================================
